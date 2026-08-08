@@ -1,0 +1,267 @@
+/* =========================================
+   NEXUS STORE
+   ESTILOS PERSONALIZADOS
+========================================= */
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+    --color-primary: #6366f1;
+    --color-primary-hover: #4f46e5;
+
+    --color-secondary: #22d3ee;
+
+    --color-dark: #0f172a;
+    --color-dark-soft: #1e293b;
+
+    --color-background: #f8fafc;
+    --color-surface: #ffffff;
+
+    --color-text: #1e293b;
+    --color-muted: #64748b;
+
+    --color-border: #e2e8f0;
+
+    --color-success: #16a34a;
+    --color-danger: #dc2626;
+
+    --font-primary: "Inter", sans-serif;
+
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+
+    --transition-base: 0.2s ease;
+}
+
+
+/* =========================================
+   ESTILOS GENERALES
+   MOBILE FIRST
+========================================= */
+
+body {
+    margin: 0;
+
+    font-family:
+        var(--font-primary);
+
+    background-color:
+        var(--color-background);
+
+    color:
+        var(--color-text);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    background-color:
+        var(--color-dark);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.nexus-navbar {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+
+/* =========================================
+   MARCA
+========================================= */
+
+.nexus-brand {
+    display: inline-flex;
+
+    gap: 0.3rem;
+
+    font-size: 1.1rem;
+    font-weight: 800;
+
+    letter-spacing: 0.04em;
+
+    text-decoration: none;
+}
+
+
+.brand-main {
+    color: #ffffff;
+}
+
+
+.brand-accent {
+    color:
+        var(--color-secondary);
+}
+
+
+/* =========================================
+   MENÚ MOBILE
+========================================= */
+
+.navbar-toggler {
+    border-color:
+        rgba(255, 255, 255, 0.25);
+}
+
+
+.navbar-toggler:focus {
+    box-shadow:
+        0 0 0 0.2rem
+        rgba(34, 211, 238, 0.25);
+}
+
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* =========================================
+   ENLACES
+========================================= */
+
+.nexus-navbar .nav-link {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-weight: 500;
+
+    transition:
+        color var(--transition-base);
+}
+
+
+.nexus-navbar .nav-link:hover,
+.nexus-navbar .nav-link:focus {
+    color:
+        var(--color-secondary);
+}
+
+
+.nexus-navbar .nav-link.active {
+    color: #ffffff;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   CARRITO
+========================================= */
+
+.btn-nexus-cart {
+    width: 100%;
+
+    margin-top: 0.5rem;
+
+    padding: 0.65rem 1rem;
+
+    background-color:
+        var(--color-primary);
+
+    border:
+        1px solid var(--color-primary);
+
+    color: #ffffff;
+
+    border-radius:
+        var(--radius-md);
+
+    font-weight: 600;
+
+    transition:
+        background-color var(--transition-base),
+        border-color var(--transition-base);
+}
+
+
+.btn-nexus-cart:hover,
+.btn-nexus-cart:focus {
+    background-color:
+        var(--color-primary-hover);
+
+    border-color:
+        var(--color-primary-hover);
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   CONTADOR DEL CARRITO
+========================================= */
+
+.cart-count {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 24px;
+    height: 24px;
+
+    margin-left: 0.4rem;
+
+    padding: 0 0.4rem;
+
+    background-color: #ffffff;
+
+    color:
+        var(--color-primary);
+
+    border-radius: 999px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   DESKTOP
+   >= 992px
+========================================= */
+
+@media (min-width: 992px) {
+
+    .nexus-navbar {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+
+    .nexus-brand {
+        font-size: 1.25rem;
+    }
+
+
+    .nexus-navbar .nav-link {
+        padding-left: 0.85rem;
+        padding-right: 0.85rem;
+    }
+
+
+    .btn-nexus-cart {
+        width: auto;
+
+        margin-top: 0;
+    }
+
+}

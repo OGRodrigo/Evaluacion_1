@@ -263,5 +263,250 @@ body {
 
         margin-top: 0;
     }
+}
 
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    background-color:
+        var(--color-dark);
+}
+
+
+/* =========================================
+   CONTENIDO DEL HERO
+========================================= */
+
+.hero-content {
+    text-align: center;
+}
+
+
+/* Texto pequeño superior */
+
+.hero-eyebrow {
+    margin-bottom: 1rem;
+
+    color:
+        var(--color-secondary);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+/* Título principal */
+
+.hero-title {
+    margin-bottom: 1.25rem;
+
+    color: #ffffff;
+
+    font-size: 2.25rem;
+    font-weight: 800;
+
+    line-height: 1.1;
+}
+
+
+/* Parte destacada del título */
+
+.hero-title-accent {
+    display: block;
+
+    color:
+        var(--color-secondary);
+}
+
+
+/* Descripción */
+
+.hero-description {
+    max-width: 540px;
+
+    margin-right: auto;
+    margin-bottom: 1.75rem;
+    margin-left: auto;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   BOTONES DEL HERO
+========================================= */
+
+.hero-actions {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.75rem;
+}
+
+
+/* Botón principal */
+
+.btn-nexus-primary {
+    padding: 0.75rem 1.25rem;
+
+    background-color:
+        var(--color-primary);
+
+    border:
+        1px solid var(--color-primary);
+
+    color: #ffffff;
+
+    border-radius:
+        var(--radius-md);
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background-color var(--transition-base),
+        border-color var(--transition-base),
+        transform var(--transition-base);
+}
+
+
+.btn-nexus-primary:hover,
+.btn-nexus-primary:focus {
+    background-color:
+        var(--color-primary-hover);
+
+    border-color:
+        var(--color-primary-hover);
+
+    color: #ffffff;
+}
+
+
+/* Botón secundario */
+
+.btn-nexus-outline {
+    padding: 0.75rem 1.25rem;
+
+    background-color: transparent;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.35);
+
+    color: #ffffff;
+
+    border-radius:
+        var(--radius-md);
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        border-color var(--transition-base),
+        color var(--transition-base),
+        background-color var(--transition-base);
+}
+
+
+.btn-nexus-outline:hover,
+.btn-nexus-outline:focus {
+    border-color:
+        var(--color-secondary);
+
+    color:
+        var(--color-secondary);
+
+    background-color:
+        rgba(34, 211, 238, 0.06);
+}
+
+
+/* =========================================
+   IMAGEN DEL HERO
+========================================= */
+
+.hero-media {
+    margin-top: 2.5rem;
+
+    text-align: center;
+}
+
+
+.hero-image {
+    width: 100%;
+
+    max-width: 520px;
+
+    border-radius:
+        var(--radius-lg);
+
+    box-shadow:
+        0 24px 60px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   DESKTOP
+   >= 992px
+========================================= */
+
+@media (min-width: 992px) {
+
+    .hero {
+        min-height: auto;
+
+        display: flex;
+
+        align-items: center;
+
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .hero-content {
+        text-align: left;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+
+    .hero-description {
+        margin-left: 0;
+    }
+
+
+    .hero-actions {
+        flex-direction: row;
+    }
+
+
+    .hero-media {
+        margin-top: 0;
+
+        text-align: right;
+    }
+
+
+    .btn-nexus-primary:hover {
+        transform: translateY(-2px);
+    }
 }

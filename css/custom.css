@@ -1658,29 +1658,6 @@ body {
 
 
 /* =========================================
-   BENEFICIOS
-========================================= */
-
-.product-benefits {
-    display: flex;
-    flex-direction: column;
-
-    gap: 0.5rem;
-
-    margin-top: 1.5rem;
-    padding-top: 1.25rem;
-
-    border-top:
-        1px solid var(--color-border);
-
-    color:
-        var(--color-muted);
-
-    font-size: 0.9rem;
-}
-
-
-/* =========================================
    DETALLE DE PRODUCTO
    DESKTOP >= 992px
 ========================================= */
@@ -1708,10 +1685,5 @@ body {
         font-size: 1.8rem;
     }
 
-    .product-benefits {
-        flex-direction: row;
-
-        justify-content: space-between;
-    }
 
 }

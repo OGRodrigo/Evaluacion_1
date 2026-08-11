@@ -1289,3 +1289,401 @@ body {
     }
 
 }
+
+/* =========================================
+   DETALLE DE PRODUCTO
+   MOBILE FIRST
+========================================= */
+
+.product-detail-section {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+
+    background-color:
+        var(--color-background);
+}
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.product-detail-section .breadcrumb {
+    margin-bottom: 0;
+
+    font-size: 0.9rem;
+}
+
+.product-detail-section .breadcrumb a {
+    color:
+        var(--color-primary);
+
+    text-decoration: none;
+}
+
+.product-detail-section .breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   GALERÍA
+========================================= */
+
+.product-gallery {
+    width: 100%;
+}
+
+.product-main-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 300px;
+
+    padding: 1rem;
+
+    border:
+        1px solid var(--color-border);
+
+    border-radius:
+        var(--radius-md);
+
+    background-color:
+        var(--color-surface);
+
+    overflow: hidden;
+}
+
+.product-main-image img {
+    display: block;
+
+    width: 100%;
+    max-width: 520px;
+    max-height: 420px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   MINIATURAS
+========================================= */
+
+.product-thumbnails {
+    flex-wrap: wrap;
+}
+
+.thumbnail-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 72px;
+    height: 72px;
+
+    padding: 0.35rem;
+
+    border:
+        1px solid var(--color-border);
+
+    border-radius:
+        var(--radius-sm);
+
+    background-color:
+        var(--color-surface);
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        border-color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.thumbnail-button:hover,
+.thumbnail-button:focus {
+    border-color:
+        var(--color-primary);
+
+    outline: none;
+}
+
+.thumbnail-button.active {
+    border-color:
+        var(--color-primary);
+
+    box-shadow:
+        0 0 0 2px rgba(99, 102, 241, 0.15);
+}
+
+.thumbnail-button img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   INFORMACIÓN DEL PRODUCTO
+========================================= */
+
+.product-detail-info {
+    color:
+        var(--color-text);
+}
+
+.product-badge {
+    display: inline-block;
+
+    margin-bottom: 0.75rem;
+
+    padding: 0.35rem 0.7rem;
+
+    border-radius:
+        999px;
+
+    color:
+        #ffffff;
+
+    background-color:
+        var(--color-primary);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.product-detail-title {
+    margin-bottom: 0.5rem;
+
+    color:
+        var(--color-text);
+
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.product-detail-price {
+    margin-bottom: 0.75rem;
+
+    color:
+        var(--color-dark);
+
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   RATING
+========================================= */
+
+.product-rating {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 0.5rem;
+
+    margin-bottom: 1.25rem;
+}
+
+.product-rating span {
+    color:
+        #f59e0b;
+
+    letter-spacing: 0.1rem;
+}
+
+.product-rating small {
+    color:
+        var(--color-muted);
+}
+
+
+/* =========================================
+   DESCRIPCIÓN
+========================================= */
+
+.product-description {
+    margin-bottom: 1.5rem;
+
+    color:
+        var(--color-muted);
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   CARACTERÍSTICAS
+========================================= */
+
+.product-specifications {
+    margin-bottom: 1.5rem;
+}
+
+.product-specifications h2 {
+    margin-bottom: 0.75rem;
+
+    color:
+        var(--color-text);
+
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.product-specifications ul {
+    margin-bottom: 0;
+
+    padding-left: 1.25rem;
+
+    color:
+        var(--color-text);
+}
+
+.product-specifications li {
+    margin-bottom: 0.4rem;
+}
+
+
+/* =========================================
+   STOCK
+========================================= */
+
+.product-stock {
+    display: flex;
+    align-items: center;
+
+    gap: 0.5rem;
+
+    margin-bottom: 1.5rem;
+
+    color:
+        var(--color-success);
+
+    font-weight: 600;
+}
+
+.stock-indicator {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background-color:
+        var(--color-success);
+}
+
+
+/* =========================================
+   CANTIDAD
+========================================= */
+
+.product-quantity {
+    margin-bottom: 1.5rem;
+}
+
+.product-quantity .form-label {
+    color:
+        var(--color-text);
+
+    font-weight: 600;
+}
+
+.quantity-control {
+    max-width: 180px;
+}
+
+.quantity-control .form-control {
+    min-width: 60px;
+}
+
+
+/* =========================================
+   ACCIONES
+========================================= */
+
+.product-actions {
+    margin-bottom: 1rem;
+}
+
+.product-actions .btn {
+    min-height: 46px;
+
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+
+    font-weight: 600;
+}
+
+.product-actions .btn-nexus-primary {
+    color:
+        #ffffff;
+
+    background-color:
+        var(--color-primary);
+
+    border-color:
+        var(--color-primary);
+}
+
+.product-actions .btn-nexus-primary:hover,
+.product-actions .btn-nexus-primary:focus {
+    color:
+        #ffffff;
+
+    background-color:
+        var(--color-primary-hover);
+
+    border-color:
+        var(--color-primary-hover);
+}
+
+
+/* =========================================
+   MENSAJE DINÁMICO
+========================================= */
+
+.product-message {
+    min-height: 1.5rem;
+
+    color:
+        var(--color-success);
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   DETALLE DE PRODUCTO
+   DESKTOP >= 992px
+========================================= */
+
+@media (min-width: 992px) {
+
+    .product-detail-section {
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+
+    .product-main-image {
+        min-height: 460px;
+    }
+
+    .product-main-image img {
+        max-height: 430px;
+    }
+
+    .product-detail-title {
+        font-size: 2.5rem;
+    }
+
+    .product-detail-price {
+        font-size: 1.8rem;
+    }
+
+
+}

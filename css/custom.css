@@ -1687,3 +1687,262 @@ body {
 
 
 }
+
+/* =========================================
+   CONTACTO
+   MOBILE FIRST
+========================================= */
+
+.contact-section {
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+
+    background-color:
+        var(--color-background);
+}
+
+
+/* =========================================
+   INFORMACIÓN DE CONTACTO
+========================================= */
+
+.contact-info {
+    height: 100%;
+}
+
+.contact-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 0.5rem;
+
+    color:
+        var(--color-primary);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.contact-title {
+    margin-bottom: 1rem;
+
+    color:
+        var(--color-text);
+
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.contact-intro {
+    margin-bottom: 2rem;
+
+    color:
+        var(--color-muted);
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   ITEMS DE CONTACTO
+========================================= */
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 1rem;
+
+    margin-bottom: 1.4rem;
+}
+
+.contact-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+
+    border:
+        1px solid var(--color-border);
+
+    border-radius:
+        var(--radius-sm);
+
+    color:
+        var(--color-primary);
+
+    background-color:
+        var(--color-surface);
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.contact-item h2 {
+    margin-bottom: 0.25rem;
+
+    color:
+        var(--color-text);
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.contact-item p,
+.contact-item a {
+    margin-bottom: 0;
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color:
+        var(--color-primary);
+}
+
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.contact-form-wrapper {
+    padding: 1.25rem;
+
+    border:
+        1px solid var(--color-border);
+
+    border-radius:
+        var(--radius-lg);
+
+    background-color:
+        var(--color-surface);
+
+    box-shadow:
+        0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.contact-form .form-label {
+    color:
+        var(--color-text);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+    min-height: 46px;
+
+    border:
+        1px solid var(--color-border);
+
+    border-radius:
+        var(--radius-sm);
+
+    color:
+        var(--color-text);
+
+    background-color:
+        var(--color-surface);
+
+    transition:
+        border-color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.contact-form textarea.form-control {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    border-color:
+        var(--color-primary);
+
+    box-shadow:
+        0 0 0 0.2rem rgba(99, 102, 241, 0.15);
+}
+
+
+/* =========================================
+   BOTÓN
+========================================= */
+
+.contact-submit {
+    width: 100%;
+    min-height: 48px;
+
+    color:
+        #ffffff;
+
+    background-color:
+        var(--color-primary);
+
+    border-color:
+        var(--color-primary);
+
+    font-weight: 700;
+}
+
+.contact-submit:hover,
+.contact-submit:focus {
+    color:
+        #ffffff;
+
+    background-color:
+        var(--color-primary-hover);
+
+    border-color:
+        var(--color-primary-hover);
+}
+
+
+/* =========================================
+   MENSAJE DEL FORMULARIO
+========================================= */
+
+.contact-form-message {
+    min-height: 1.5rem;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   CONTACTO DESKTOP >= 992px
+========================================= */
+
+@media (min-width: 992px) {
+
+    .contact-section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .contact-title {
+        font-size: 2.6rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 2rem;
+    }
+
+    .contact-submit {
+        width: auto;
+
+        min-width: 180px;
+    }
+
+}

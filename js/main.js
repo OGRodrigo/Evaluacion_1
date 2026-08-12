@@ -386,6 +386,9 @@ const productSearch =
 const categoryFilter =
     document.querySelector("#category-filter");
 
+const sortProducts =
+    document.querySelector("#sort-products");
+
 const productsCounter =
     document.querySelector("#products-counter");
 
@@ -549,7 +552,129 @@ function filterProducts() {
     );
 
 }
+/* =========================================
+   ORDENAR PRODUCTOS
+========================================= */
 
+function orderProducts() {
+
+    if (
+        !productsGrid ||
+        productItems.length === 0
+    ) {
+        return;
+    }
+
+    const selectedOrder =
+        sortProducts?.value || "default";
+
+
+    /*
+        Creamos una copia para no alterar
+        permanentemente el arreglo original.
+    */
+
+    const orderedProducts =
+        [...productItems];
+
+
+    /*
+        MENOR PRECIO
+    */
+
+    if (selectedOrder === "price-low") {
+
+        orderedProducts.sort(
+            (productA, productB) => {
+
+                const priceA =
+                    Number(productA.dataset.price);
+
+                const priceB =
+                    Number(productB.dataset.price);
+
+                return priceA - priceB;
+
+            }
+        );
+
+    }
+
+
+    /*
+        MAYOR PRECIO
+    */
+
+    else if (
+        selectedOrder === "price-high"
+    ) {
+
+        orderedProducts.sort(
+            (productA, productB) => {
+
+                const priceA =
+                    Number(productA.dataset.price);
+
+                const priceB =
+                    Number(productB.dataset.price);
+
+                return priceB - priceA;
+
+            }
+        );
+
+    }
+
+
+    /*
+        NOMBRE A-Z
+    */
+
+    else if (
+        selectedOrder === "name-az"
+    ) {
+
+        orderedProducts.sort(
+            (productA, productB) => {
+
+                const nameA =
+                    normalizeProductText(
+                        productA.dataset.name || ""
+                    );
+
+                const nameB =
+                    normalizeProductText(
+                        productB.dataset.name || ""
+                    );
+
+                return nameA.localeCompare(
+                    nameB,
+                    "es"
+                );
+
+            }
+        );
+
+    }
+
+
+    /*
+        Reinsertamos las cards
+        en el nuevo orden.
+
+        appendChild mueve el elemento,
+        no lo duplica.
+    */
+
+    orderedProducts.forEach(
+        (product) => {
+
+            productsGrid.appendChild(product);
+
+        }
+    );
+
+}
 
 /* =========================================
    EVENTO: BUSCADOR
@@ -563,7 +688,18 @@ if (productSearch) {
     );
 
 }
+/* =========================================
+   EVENTO: ORDENAMIENTO
+========================================= */
 
+if (sortProducts) {
+
+    sortProducts.addEventListener(
+        "change",
+        orderProducts
+    );
+
+}
 
 /* =========================================
    EVENTO: CATEGORÍA

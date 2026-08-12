@@ -115,23 +115,51 @@ function getProductQuantity() {
         return 1;
     }
 
+
     const quantity =
         Number(productQuantity.value);
 
 
+    const minQuantity =
+        Number(productQuantity.min) || 1;
+
+
+    const maxQuantity =
+        Number(productQuantity.max) || 10;
+
+
     /*
-        Si por alguna razón recibimos
-        un valor incorrecto, usamos 1.
+        Si el valor no es válido,
+        devolvemos null.
     */
 
     if (
         Number.isNaN(quantity) ||
-        quantity < 1
+        quantity < minQuantity ||
+        quantity > maxQuantity
     ) {
-        return 1;
+        return null;
     }
 
+
     return quantity;
+
+}
+
+function showInventoryMessage() {
+
+    if (!cartMessage || !productQuantity) {
+        return;
+    }
+
+
+    const maxQuantity =
+        Number(productQuantity.max) || 10;
+
+
+    cartMessage.textContent =
+        `La cantidad máxima de compra por producto es de ${maxQuantity} unidades.`;
+
 }
 
 
@@ -145,20 +173,40 @@ function decreaseQuantity() {
         return;
     }
 
+
     const currentQuantity =
-        getProductQuantity();
+        Number(productQuantity.value);
+
+
+    const minQuantity =
+        Number(productQuantity.min) || 1;
 
 
     /*
-        No permitimos bajar de 1.
+        Si el valor no es válido
+        usamos el mínimo.
     */
 
-    if (currentQuantity > 1) {
+    if (
+        Number.isNaN(currentQuantity) ||
+        currentQuantity < minQuantity
+    ) {
+
+        productQuantity.value =
+            minQuantity;
+
+        return;
+
+    }
+
+
+    if (currentQuantity > minQuantity) {
 
         productQuantity.value =
             currentQuantity - 1;
 
     }
+
 }
 
 
@@ -172,12 +220,41 @@ function increaseQuantity() {
         return;
     }
 
+
     const currentQuantity =
-        getProductQuantity();
+        Number(productQuantity.value);
 
 
-    productQuantity.value =
-        currentQuantity + 1;
+    const maxQuantity =
+        Number(productQuantity.max) || 10;
+
+
+    /*
+        Si el valor actual no es válido,
+        volvemos al mínimo.
+    */
+
+    if (Number.isNaN(currentQuantity)) {
+
+        productQuantity.value = 1;
+
+        return;
+
+    }
+
+
+    /*
+        Solo aumentamos si no
+        alcanzamos el máximo.
+    */
+
+    if (currentQuantity < maxQuantity) {
+
+        productQuantity.value =
+            currentQuantity + 1;
+
+    }
+
 }
 
 
@@ -192,22 +269,14 @@ function showCartMessage(quantity) {
     }
 
 
-    /*
-        Elegimos singular o plural.
-    */
-
-    const word =
+    const message =
         quantity === 1
-            ? "producto"
-            : "productos";
+            ? "1 producto agregado al carrito."
+            : `${quantity} productos agregados al carrito.`;
 
-
-    /*
-        Modificamos visiblemente el DOM.
-    */
 
     cartMessage.textContent =
-        `${quantity} ${word} agregado al carrito.`;
+        message;
 
 }
 
@@ -218,43 +287,39 @@ function showCartMessage(quantity) {
 
 function addProductToCart() {
 
-    /*
-        Obtenemos la cantidad seleccionada
-        en producto.html.
-    */
-
     const selectedQuantity =
         getProductQuantity();
 
 
     /*
-        Sumamos esa cantidad al carrito.
+        Si la cantidad está fuera
+        del rango permitido,
+        no agregamos productos.
     */
+
+    if (selectedQuantity === null) {
+
+        showInventoryMessage();
+
+        return;
+
+    }
+
 
     cartQuantity +=
         selectedQuantity;
 
 
-    /*
-        Guardamos el nuevo valor.
-    */
-
     saveCart();
 
 
-    /*
-        Actualizamos el contador
-        del Navbar.
-    */
     updateCartCounter();
 
 
-    /*
-        Mostramos feedback visible.
-    */
     showCartMessage(
         selectedQuantity
     );
+
 }
 
 

@@ -501,6 +501,79 @@ Las principales estructuras visuales y responsive del sitio ya fueron implementa
 
 Las funcionalidades JavaScript se están incorporando mediante features independientes y Pull Requests para mantener una historia Git clara y facilitar el Code Review.
 
+# 📸 Capturas del proyecto
+
+Las siguientes capturas muestran la interfaz de Nexus Store tanto en escritorio como en dispositivos móviles, permitiendo visualizar la adaptación responsive del proyecto.
+
+---
+
+## 🏠 Home
+
+### Desktop
+
+<img src="docs/screenshots/home.jpg"
+     alt="Nexus Store Home en escritorio"
+     width="850">
+
+El Home presenta la navegación principal, el Hero y las categorías de productos del sitio.
+
+---
+
+## 📦 Catálogo de productos
+
+### Desktop
+
+<img src="docs/screenshots/productos.jpg"
+     alt="Catálogo de productos Nexus Store en escritorio"
+     width="850">
+
+### Mobile
+
+<img src="docs/screenshots/productos-mobile.jpg"
+     alt="Catálogo de productos Nexus Store en dispositivo móvil"
+     width="320">
+
+En dispositivos móviles, los controles de búsqueda, categoría y ordenamiento se organizan verticalmente y las cards de productos se adaptan al ancho disponible.
+
+---
+
+## 🔍 Detalle de producto
+
+### Desktop
+
+<img src="docs/screenshots/producto.jpg"
+     alt="Detalle de producto Nexus Store en escritorio"
+     width="850">
+
+### Mobile
+
+<img src="docs/screenshots/producto-mobile.jpg"
+     alt="Detalle de producto Nexus Store en dispositivo móvil"
+     width="320">
+
+La vista de detalle cambia desde una distribución horizontal en escritorio a una distribución vertical en dispositivos móviles.
+
+---
+
+## ✉️ Contacto
+
+### Desktop
+
+<img src="docs/screenshots/contacto.jpg"
+     alt="Página de contacto Nexus Store en escritorio"
+     width="850">
+
+### Mobile
+
+<img src="docs/screenshots/contacto-mobile.jpg"
+     alt="Página de contacto Nexus Store en dispositivo móvil"
+     width="320">
+
+La información de contacto y el formulario se reorganizan para mantener una correcta visualización y experiencia de usuario en pantallas pequeñas.
+
+---
+
+
 
 👥 Trabajo colaborativo
 

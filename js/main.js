@@ -369,3 +369,363 @@ if (addToCartButton) {
 */
 
 updateCartCounter();
+
+/* =========================================
+   CATÁLOGO DE PRODUCTOS
+========================================= */
+
+
+/*
+    Elementos disponibles solamente
+    en productos.html.
+*/
+
+const productSearch =
+    document.querySelector("#product-search");
+
+const categoryFilter =
+    document.querySelector("#category-filter");
+
+const sortProducts =
+    document.querySelector("#sort-products");
+
+const productsCounter =
+    document.querySelector("#products-counter");
+
+const productsGrid =
+    document.querySelector("#products-grid");
+
+const productItems =
+    Array.from(
+        document.querySelectorAll(".product-item")
+    );
+
+
+/* =========================================
+   NORMALIZAR TEXTO
+========================================= */
+
+/*
+    Convertimos el texto a minúsculas
+    y eliminamos tildes.
+
+    De esta forma:
+
+    "Mecánico"
+    "mecanico"
+
+    pueden coincidir en una búsqueda.
+*/
+
+function normalizeProductText(text) {
+
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+
+}
+
+
+/* =========================================
+   ACTUALIZAR CONTADOR DE RESULTADOS
+========================================= */
+
+function updateProductsCounter(quantity) {
+
+    if (!productsCounter) {
+        return;
+    }
+
+    const message =
+        quantity === 1
+            ? "1 producto encontrado"
+            : `${quantity} productos encontrados`;
+
+    productsCounter.textContent =
+        message;
+
+}
+
+
+/* =========================================
+   FILTRAR PRODUCTOS
+========================================= */
+
+function filterProducts() {
+
+    if (productItems.length === 0) {
+        return;
+    }
+
+
+    /*
+        Obtenemos el texto escrito
+        por el usuario.
+    */
+
+    const searchValue =
+        normalizeProductText(
+            productSearch?.value.trim() || ""
+        );
+
+
+    /*
+        Obtenemos la categoría seleccionada.
+    */
+
+    const selectedCategory =
+        categoryFilter?.value || "all";
+
+
+    let visibleProducts = 0;
+
+
+    productItems.forEach((product) => {
+
+        const productName =
+            normalizeProductText(
+                product.dataset.name || ""
+            );
+
+        const productCategory =
+        normalizeProductText(
+            product.dataset.category || ""
+        );
+
+
+        /*
+            Coincidencia por nombre.
+        */
+
+        const matchesSearch =
+                productName.includes(searchValue) ||
+                productCategory.includes(searchValue);
+
+
+        /*
+            Coincidencia por categoría.
+
+            "all" significa mostrar todas.
+        */
+
+        const matchesCategory =
+            selectedCategory === "all" ||
+            productCategory === selectedCategory;
+
+
+        /*
+            El producto se muestra solamente
+            cuando cumple ambas condiciones.
+        */
+
+        const shouldShow =
+            matchesSearch &&
+            matchesCategory;
+
+
+        /*
+            d-none es una clase de Bootstrap
+            que oculta el elemento.
+        */
+
+        product.classList.toggle(
+            "d-none",
+            !shouldShow
+        );
+
+
+        if (shouldShow) {
+            visibleProducts++;
+        }
+
+    });
+
+
+    /*
+        Actualizamos visiblemente
+        el contador del DOM.
+    */
+
+    updateProductsCounter(
+        visibleProducts
+    );
+
+}
+/* =========================================
+   ORDENAR PRODUCTOS
+========================================= */
+
+function orderProducts() {
+
+    if (
+        !productsGrid ||
+        productItems.length === 0
+    ) {
+        return;
+    }
+
+    const selectedOrder =
+        sortProducts?.value || "default";
+
+
+    /*
+        Creamos una copia para no alterar
+        permanentemente el arreglo original.
+    */
+
+    const orderedProducts =
+        [...productItems];
+
+
+    /*
+        MENOR PRECIO
+    */
+
+    if (selectedOrder === "price-low") {
+
+        orderedProducts.sort(
+            (productA, productB) => {
+
+                const priceA =
+                    Number(productA.dataset.price);
+
+                const priceB =
+                    Number(productB.dataset.price);
+
+                return priceA - priceB;
+
+            }
+        );
+
+    }
+
+
+    /*
+        MAYOR PRECIO
+    */
+
+    else if (
+        selectedOrder === "price-high"
+    ) {
+
+        orderedProducts.sort(
+            (productA, productB) => {
+
+                const priceA =
+                    Number(productA.dataset.price);
+
+                const priceB =
+                    Number(productB.dataset.price);
+
+                return priceB - priceA;
+
+            }
+        );
+
+    }
+
+
+    /*
+        NOMBRE A-Z
+    */
+
+    else if (
+        selectedOrder === "name-az"
+    ) {
+
+        orderedProducts.sort(
+            (productA, productB) => {
+
+                const nameA =
+                    normalizeProductText(
+                        productA.dataset.name || ""
+                    );
+
+                const nameB =
+                    normalizeProductText(
+                        productB.dataset.name || ""
+                    );
+
+                return nameA.localeCompare(
+                    nameB,
+                    "es"
+                );
+
+            }
+        );
+
+    }
+
+
+    /*
+        Reinsertamos las cards
+        en el nuevo orden.
+
+        appendChild mueve el elemento,
+        no lo duplica.
+    */
+
+    orderedProducts.forEach(
+        (product) => {
+
+            productsGrid.appendChild(product);
+
+        }
+    );
+
+}
+
+/* =========================================
+   EVENTO: BUSCADOR
+========================================= */
+
+if (productSearch) {
+
+    productSearch.addEventListener(
+        "input",
+        filterProducts
+    );
+
+}
+/* =========================================
+   EVENTO: ORDENAMIENTO
+========================================= */
+
+if (sortProducts) {
+
+    sortProducts.addEventListener(
+        "change",
+        orderProducts
+    );
+
+}
+
+/* =========================================
+   EVENTO: CATEGORÍA
+========================================= */
+
+if (categoryFilter) {
+
+    categoryFilter.addEventListener(
+        "change",
+        filterProducts
+    );
+
+}
+
+
+/* =========================================
+   INICIALIZACIÓN DEL CATÁLOGO
+========================================= */
+
+if (
+    productsGrid &&
+    productItems.length > 0
+) {
+
+    updateProductsCounter(
+        productItems.length
+    );
+
+}

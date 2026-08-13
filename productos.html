@@ -2,104 +2,33 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="Catálogo de productos tecnológicos de Nexus Store."
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de productos tecnológicos de Nexus Store.">
     <title>Nexus Store | Productos</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- =========================================
-         GOOGLE FONTS
-    ========================================== -->
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
-
-
-    <!-- =========================================
-         BOOTSTRAP
-    ========================================== -->
-
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
-
-
-    <!-- =========================================
-         CSS PERSONALIZADO
-    ========================================== -->
-
-    <link
-        rel="stylesheet"
-        href="css/custom.css"
-    >
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 
-
 <body>
-
 
     <!-- =========================================
          HEADER
     ========================================== -->
 
     <header class="site-header">
-
-
-        <!-- Navegación principal -->
-
-        <nav
-            class="navbar navbar-expand-lg nexus-navbar"
-            aria-label="Navegación principal"
-        >
-
+        <nav class="navbar navbar-expand-lg nexus-navbar" aria-label="Navegación principal">
             <div class="container">
 
-
-                <!-- Marca -->
-
-                <a
-                    class="navbar-brand nexus-brand"
-                    href="index.html"
-                >
-
-                    <span class="brand-main">
-                        NEXUS
-                    </span>
-
-                    <span class="brand-accent">
-                        STORE
-                    </span>
-
+                <a class="navbar-brand nexus-brand" href="index.html">
+                    <span class="brand-main">NEXUS</span>
+                    <span class="brand-accent">STORE</span>
                 </a>
-
-
-                <!-- Botón menú mobile -->
 
                 <button
                     class="navbar-toggler"
@@ -110,42 +39,19 @@
                     aria-expanded="false"
                     aria-label="Abrir menú de navegación"
                 >
-
                     <span class="navbar-toggler-icon"></span>
-
                 </button>
 
-
-                <!-- Menú -->
-
-                <div
-                    class="collapse navbar-collapse"
-                    id="mainNavbar"
-                >
-
-                    <ul
-                        class="navbar-nav ms-auto align-items-lg-center"
-                    >
-
-
-                        <!-- Inicio -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
 
                         <li class="nav-item">
-
-                            <a
-                                class="nav-link"
-                                href="index.html"
-                            >
+                            <a class="nav-link" href="index.html">
                                 Inicio
                             </a>
-
                         </li>
 
-
-                        <!-- Productos -->
-
                         <li class="nav-item">
-
                             <a
                                 class="nav-link active"
                                 aria-current="page"
@@ -153,57 +59,31 @@
                             >
                                 Productos
                             </a>
-
                         </li>
-
-
-                        <!-- Contacto -->
 
                         <li class="nav-item">
-
-                            <a
-                                class="nav-link"
-                                href="contacto.html"
-                            >
+                            <a class="nav-link" href="contacto.html">
                                 Contacto
                             </a>
-
                         </li>
 
-
-                        <!-- Carrito -->
-
                         <li class="nav-item ms-lg-3">
-
                             <a
                                 class="btn btn-nexus-cart"
                                 href="#"
                                 aria-label="Ver carrito de compras"
                             >
-
                                 Carrito
-
-                                <span
-                                    id="cart-count"
-                                    class="cart-count"
-                                >
-                                    0
-                                </span>
-
+                                <span id="cart-count" class="cart-count">0</span>
                             </a>
-
                         </li>
 
                     </ul>
-
                 </div>
 
             </div>
-
         </nav>
-
     </header>
-
 
 
     <!-- =========================================
@@ -211,24 +91,13 @@
     ========================================== -->
 
     <main>
-
-
-        <!-- =====================================
-             LISTADO DE PRODUCTOS
-        ====================================== -->
-
         <section
             class="products-section"
             aria-labelledby="products-title"
         >
-
             <div class="container">
 
-
-                <!-- Encabezado -->
-
                 <div class="products-header text-center">
-
                     <h1 id="products-title">
                         Todos los productos
                     </h1>
@@ -236,9 +105,7 @@
                     <p>
                         Encuentra lo que necesitas en nuestra tienda
                     </p>
-
                 </div>
-
 
 
                 <!-- =================================
@@ -247,11 +114,7 @@
 
                 <div class="row g-3 mb-4">
 
-
-                    <!-- Buscar -->
-
                     <div class="col-12 col-lg-6">
-
                         <label
                             for="product-search"
                             class="form-label visually-hidden"
@@ -266,14 +129,9 @@
                             placeholder="Buscar productos..."
                             autocomplete="off"
                         >
-
                     </div>
 
-
-                    <!-- Categoría -->
-
                     <div class="col-12 col-md-6 col-lg-3">
-
                         <label
                             for="category-filter"
                             class="form-label visually-hidden"
@@ -285,40 +143,16 @@
                             class="form-select"
                             id="category-filter"
                         >
-
-                            <option value="all">
-                                Categoría
-                            </option>
-
-                            <option value="notebooks">
-                                Notebooks
-                            </option>
-
-                            <option value="smartphones">
-                                Smartphones
-                            </option>
-
-                            <option value="audio">
-                                Audio
-                            </option>
-
-                            <option value="gaming">
-                                Gaming
-                            </option>
-
-                            <option value="accesorios">
-                                Accesorios
-                            </option>
-
+                            <option value="all">Categoría</option>
+                            <option value="notebooks">Notebooks</option>
+                            <option value="smartphones">Smartphones</option>
+                            <option value="audio">Audio</option>
+                            <option value="gaming">Gaming</option>
+                            <option value="accesorios">Accesorios</option>
                         </select>
-
                     </div>
 
-
-                    <!-- Orden -->
-
                     <div class="col-12 col-md-6 col-lg-3">
-
                         <label
                             for="sort-products"
                             class="form-label visually-hidden"
@@ -330,32 +164,19 @@
                             class="form-select"
                             id="sort-products"
                         >
-
-                            <option value="default">
-                                Ordenar por
-                            </option>
-
-                            <option value="price-low">
-                                Menor precio
-                            </option>
-
-                            <option value="price-high">
-                                Mayor precio
-                            </option>
-
-                            <option value="name-az">
-                                Nombre A-Z
-                            </option>
-
+                            <option value="default">Ordenar por</option>
+                            <option value="price-low">Menor precio</option>
+                            <option value="price-high">Mayor precio</option>
+                            <option value="name-az">Nombre A-Z</option>
                         </select>
-
                     </div>
 
                 </div>
 
 
-
-                <!-- Contador de resultados -->
+                <!-- =================================
+                     CONTADOR
+                ================================== -->
 
                 <p
                     id="products-counter"
@@ -366,20 +187,14 @@
                 </p>
 
 
-
                 <!-- =================================
-                     GRID DE PRODUCTOS
+                     GRID
                 ================================== -->
 
-                <div
-                    class="row g-4"
-                    id="products-grid"
-                >
+                <div class="row g-4" id="products-grid">
 
 
-                    <!-- =================================
-                         PRODUCTO 1
-                    ================================== -->
+                    <!-- ASUS -->
 
                     <div
                         class="col-12 col-md-6 col-lg-4 product-item"
@@ -387,42 +202,33 @@
                         data-name="Notebook ASUS VivoBook 15"
                         data-price="699990"
                     >
+                        <a
+                            href="producto.html?id=asus-vivobook"
+                            class="text-decoration-none text-reset d-block h-100"
+                            aria-label="Ver detalle del Notebook ASUS VivoBook 15"
+                        >
+                            <article class="card product-card h-100">
+                                <img
+                                    src="img/asus-vivobook.jpg"
+                                    class="card-img-top product-image"
+                                    alt="Notebook ASUS VivoBook 15"
+                                >
 
-                        <article class="card product-card h-100">
+                                <div class="card-body">
+                                    <h2 class="card-title product-name">
+                                        Notebook ASUS VivoBook 15
+                                    </h2>
 
-                            <img
-                                src="img/asus-vivobook.jpg"
-                                class="card-img-top product-image"
-                                alt="Notebook ASUS VivoBook 15"
-                            >
-
-                            <div class="card-body">
-
-                                <h2 class="card-title product-name">
-                                    Notebook ASUS VivoBook 15
-                                </h2>
-
-                                <p class="product-price">
-                                    $699.990
-                                </p>
-
-                                <a
-                                    href="producto.html"
-                                    class="stretched-link"
-                                    aria-label="Ver detalle del Notebook ASUS VivoBook 15"
-                                ></a>
-
-                            </div>
-
-                        </article>
-
+                                    <p class="product-price">
+                                        $699.990
+                                    </p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
 
 
-
-                    <!-- =================================
-                         PRODUCTO 2
-                    ================================== -->
+                    <!-- MACBOOK -->
 
                     <div
                         class="col-12 col-md-6 col-lg-4 product-item"
@@ -430,42 +236,33 @@
                         data-name="MacBook Air M2"
                         data-price="1299990"
                     >
+                        <a
+                            href="producto.html?id=macbook-air-m2"
+                            class="text-decoration-none text-reset d-block h-100"
+                            aria-label="Ver detalle del MacBook Air M2"
+                        >
+                            <article class="card product-card h-100">
+                                <img
+                                    src="img/macbook-air-m2.jpg"
+                                    class="card-img-top product-image"
+                                    alt="Notebook Apple MacBook Air M2"
+                                >
 
-                        <article class="card product-card h-100">
+                                <div class="card-body">
+                                    <h2 class="card-title product-name">
+                                        MacBook Air M2
+                                    </h2>
 
-                            <img
-                                src="img/macbook-air-m2.jpg"
-                                class="card-img-top product-image"
-                                alt="Notebook Apple MacBook Air M2"
-                            >
-
-                            <div class="card-body">
-
-                                <h2 class="card-title product-name">
-                                    MacBook Air M2
-                                </h2>
-
-                                <p class="product-price">
-                                    $1.299.990
-                                </p>
-
-                                <a
-                                    href="producto.html"
-                                    class="stretched-link"
-                                    aria-label="Ver detalle del MacBook Air M2"
-                                ></a>
-
-                            </div>
-
-                        </article>
-
+                                    <p class="product-price">
+                                        $1.299.990
+                                    </p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
 
 
-
-                    <!-- =================================
-                         PRODUCTO 3
-                    ================================== -->
+                    <!-- SAMSUNG -->
 
                     <div
                         class="col-12 col-md-6 col-lg-4 product-item"
@@ -473,42 +270,33 @@
                         data-name="Samsung Galaxy S24"
                         data-price="799990"
                     >
+                        <a
+                            href="producto.html?id=samsung-galaxy-s24"
+                            class="text-decoration-none text-reset d-block h-100"
+                            aria-label="Ver detalle del Samsung Galaxy S24"
+                        >
+                            <article class="card product-card h-100">
+                                <img
+                                    src="img/samsung-galaxy-s24.jpg"
+                                    class="card-img-top product-image"
+                                    alt="Smartphone Samsung Galaxy S24"
+                                >
 
-                        <article class="card product-card h-100">
+                                <div class="card-body">
+                                    <h2 class="card-title product-name">
+                                        Samsung Galaxy S24
+                                    </h2>
 
-                            <img
-                                src="img/samsung-galaxy-s24.jpg"
-                                class="card-img-top product-image"
-                                alt="Smartphone Samsung Galaxy S24"
-                            >
-
-                            <div class="card-body">
-
-                                <h2 class="card-title product-name">
-                                    Samsung Galaxy S24
-                                </h2>
-
-                                <p class="product-price">
-                                    $799.990
-                                </p>
-
-                                <a
-                                    href="producto.html"
-                                    class="stretched-link"
-                                    aria-label="Ver detalle del Samsung Galaxy S24"
-                                ></a>
-
-                            </div>
-
-                        </article>
-
+                                    <p class="product-price">
+                                        $799.990
+                                    </p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
 
 
-
-                    <!-- =================================
-                         PRODUCTO 4
-                    ================================== -->
+                    <!-- IPHONE -->
 
                     <div
                         class="col-12 col-md-6 col-lg-4 product-item"
@@ -516,42 +304,33 @@
                         data-name="iPhone 15"
                         data-price="929990"
                     >
+                        <a
+                            href="producto.html?id=iphone-15"
+                            class="text-decoration-none text-reset d-block h-100"
+                            aria-label="Ver detalle del iPhone 15"
+                        >
+                            <article class="card product-card h-100">
+                                <img
+                                    src="img/iphone-15.jpg"
+                                    class="card-img-top product-image"
+                                    alt="Smartphone Apple iPhone 15"
+                                >
 
-                        <article class="card product-card h-100">
+                                <div class="card-body">
+                                    <h2 class="card-title product-name">
+                                        iPhone 15
+                                    </h2>
 
-                            <img
-                                src="img/iphone-15.jpg"
-                                class="card-img-top product-image"
-                                alt="Smartphone Apple iPhone 15"
-                            >
-
-                            <div class="card-body">
-
-                                <h2 class="card-title product-name">
-                                    iPhone 15
-                                </h2>
-
-                                <p class="product-price">
-                                    $929.990
-                                </p>
-
-                                <a
-                                    href="producto.html"
-                                    class="stretched-link"
-                                    aria-label="Ver detalle del iPhone 15"
-                                ></a>
-
-                            </div>
-
-                        </article>
-
+                                    <p class="product-price">
+                                        $929.990
+                                    </p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
 
 
-
-                    <!-- =================================
-                         PRODUCTO 5
-                    ================================== -->
+                    <!-- SONY -->
 
                     <div
                         class="col-12 col-md-6 col-lg-4 product-item"
@@ -559,42 +338,33 @@
                         data-name="Audífonos Sony WH-CH720N"
                         data-price="129990"
                     >
+                        <a
+                            href="producto.html?id=sony-wh-ch720n"
+                            class="text-decoration-none text-reset d-block h-100"
+                            aria-label="Ver detalle de los audífonos Sony WH-CH720N"
+                        >
+                            <article class="card product-card h-100">
+                                <img
+                                    src="img/sony-wh-ch720n.jpg"
+                                    class="card-img-top product-image"
+                                    alt="Audífonos inalámbricos Sony WH-CH720N"
+                                >
 
-                        <article class="card product-card h-100">
+                                <div class="card-body">
+                                    <h2 class="card-title product-name">
+                                        Audífonos Sony WH-CH720N
+                                    </h2>
 
-                            <img
-                                src="img/sony-wh-ch720n.jpg"
-                                class="card-img-top product-image"
-                                alt="Audífonos inalámbricos Sony WH-CH720N"
-                            >
-
-                            <div class="card-body">
-
-                                <h2 class="card-title product-name">
-                                    Audífonos Sony WH-CH720N
-                                </h2>
-
-                                <p class="product-price">
-                                    $129.990
-                                </p>
-
-                                <a
-                                    href="producto.html"
-                                    class="stretched-link"
-                                    aria-label="Ver detalle de los audífonos Sony WH-CH720N"
-                                ></a>
-
-                            </div>
-
-                        </article>
-
+                                    <p class="product-price">
+                                        $129.990
+                                    </p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
 
 
-
-                    <!-- =================================
-                         PRODUCTO 6
-                    ================================== -->
+                    <!-- JBL -->
 
                     <div
                         class="col-12 col-md-6 col-lg-4 product-item"
@@ -602,42 +372,33 @@
                         data-name="Parlante JBL Charge 5"
                         data-price="149990"
                     >
+                        <a
+                            href="producto.html?id=jbl-charge-5"
+                            class="text-decoration-none text-reset d-block h-100"
+                            aria-label="Ver detalle del Parlante JBL Charge 5"
+                        >
+                            <article class="card product-card h-100">
+                                <img
+                                    src="img/jbl-charge-5.jpg"
+                                    class="card-img-top product-image"
+                                    alt="Parlante portátil JBL Charge 5"
+                                >
 
-                        <article class="card product-card h-100">
+                                <div class="card-body">
+                                    <h2 class="card-title product-name">
+                                        Parlante JBL Charge 5
+                                    </h2>
 
-                            <img
-                                src="img/jbl-charge-5.jpg"
-                                class="card-img-top product-image"
-                                alt="Parlante portátil JBL Charge 5"
-                            >
-
-                            <div class="card-body">
-
-                                <h2 class="card-title product-name">
-                                    Parlante JBL Charge 5
-                                </h2>
-
-                                <p class="product-price">
-                                    $149.990
-                                </p>
-
-                                <a
-                                    href="producto.html"
-                                    class="stretched-link"
-                                    aria-label="Ver detalle del Parlante JBL Charge 5"
-                                ></a>
-
-                            </div>
-
-                        </article>
-
+                                    <p class="product-price">
+                                        $149.990
+                                    </p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
 
 
-
-                    <!-- =================================
-                         PRODUCTO 7
-                    ================================== -->
+                    <!-- LOGITECH G913 -->
 
                     <div
                         class="col-12 col-md-6 col-lg-4 product-item"
@@ -645,85 +406,67 @@
                         data-name="Teclado Mecánico Logitech G913"
                         data-price="199990"
                     >
+                        <a
+                            href="producto.html?id=logitech-g913"
+                            class="text-decoration-none text-reset d-block h-100"
+                            aria-label="Ver detalle del Teclado Logitech G913"
+                        >
+                            <article class="card product-card h-100">
+                                <img
+                                    src="img/logitech-g913.jpg"
+                                    class="card-img-top product-image"
+                                    alt="Teclado mecánico Logitech G913"
+                                >
 
-                        <article class="card product-card h-100">
+                                <div class="card-body">
+                                    <h2 class="card-title product-name">
+                                        Teclado Mecánico Logitech G913
+                                    </h2>
 
-                            <img
-                                src="img/logitech-g913.jpg"
-                                class="card-img-top product-image"
-                                alt="Teclado mecánico Logitech G913"
-                            >
-
-                            <div class="card-body">
-
-                                <h2 class="card-title product-name">
-                                    Teclado Mecánico Logitech G913
-                                </h2>
-
-                                <p class="product-price">
-                                    $199.990
-                                </p>
-
-                                <a
-                                    href="producto.html"
-                                    class="stretched-link"
-                                    aria-label="Ver detalle del Teclado Logitech G913"
-                                ></a>
-
-                            </div>
-
-                        </article>
-
+                                    <p class="product-price">
+                                        $199.990
+                                    </p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
 
 
-
-                    <!-- =================================
-                         PRODUCTO 8
-                    ================================== -->
+                    <!-- MX MASTER 3S -->
 
                     <div
                         class="col-12 col-md-6 col-lg-4 product-item"
                         data-category="accesorios"
-                        data-name="Mouse Logitech MX Master 3S"
+                        data-name="Mouse Inalámbrico Logitech MX Master 3S"
                         data-price="99990"
                     >
+                        <a
+                            href="producto.html?id=logitech-mx-master-3s"
+                            class="text-decoration-none text-reset d-block h-100"
+                            aria-label="Ver detalle del Mouse Logitech MX Master 3S"
+                        >
+                            <article class="card product-card h-100">
+                                <img
+                                    src="img/logitech-mx-master-3s.jpg"
+                                    class="card-img-top product-image"
+                                    alt="Mouse inalámbrico Logitech MX Master 3S"
+                                >
 
-                        <article class="card product-card h-100">
+                                <div class="card-body">
+                                    <h2 class="card-title product-name">
+                                        Mouse Inalámbrico Logitech MX Master 3S
+                                    </h2>
 
-                            <img
-                                src="img/logitech-mx-master-3s.jpg"
-                                class="card-img-top product-image"
-                                alt="Mouse inalámbrico Logitech MX Master 3S"
-                            >
-
-                            <div class="card-body">
-
-                                <h2 class="card-title product-name">
-                                    Mouse Inalámbrico Logitech MX Master 3S
-                                </h2>
-
-                                <p class="product-price">
-                                    $99.990
-                                </p>
-
-                                <a
-                                    href="producto.html"
-                                    class="stretched-link"
-                                    aria-label="Ver detalle del Mouse Logitech MX Master 3S"
-                                ></a>
-
-                            </div>
-
-                        </article>
-
+                                    <p class="product-price">
+                                        $99.990
+                                    </p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
 
 
-
-                    <!-- =================================
-                         PRODUCTO 9
-                    ================================== -->
+                    <!-- CORSAIR -->
 
                     <div
                         class="col-12 col-md-6 col-lg-4 product-item"
@@ -731,89 +474,60 @@
                         data-name="Silla Gamer Corsair TC100"
                         data-price="249990"
                     >
+                        <a
+                            href="producto.html?id=corsair-tc100"
+                            class="text-decoration-none text-reset d-block h-100"
+                            aria-label="Ver detalle de la Silla Gamer Corsair TC100"
+                        >
+                            <article class="card product-card h-100">
+                                <img
+                                    src="img/corsair-tc100.jpg"
+                                    class="card-img-top product-image"
+                                    alt="Silla Gamer Corsair TC100"
+                                >
 
-                        <article class="card product-card h-100">
+                                <div class="card-body">
+                                    <h2 class="card-title product-name">
+                                        Silla Gamer Corsair TC100
+                                    </h2>
 
-                            <img
-                                src="img/corsair-tc100.jpg"
-                                class="card-img-top product-image"
-                                alt="Silla Gamer Corsair TC100"
-                            >
-
-                            <div class="card-body">
-
-                                <h2 class="card-title product-name">
-                                    Silla Gamer Corsair TC100
-                                </h2>
-
-                                <p class="product-price">
-                                    $249.990
-                                </p>
-
-                                <a
-                                    href="producto.html"
-                                    class="stretched-link"
-                                    aria-label="Ver detalle de la Silla Gamer Corsair TC100"
-                                ></a>
-
-                            </div>
-
-                        </article>
-
+                                    <p class="product-price">
+                                        $249.990
+                                    </p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
 
-
                 </div>
-
 
 
                 <!-- =================================
                      PAGINACIÓN VISUAL
                 ================================== -->
 
-                <nav
-                    class="mt-5"
-                    aria-label="Paginación del catálogo"
-                >
-
+                <nav class="mt-5" aria-label="Paginación del catálogo">
                     <ul class="pagination justify-content-center">
 
                         <li class="page-item active">
-
-                            <a
-                                class="page-link"
-                                href="#"
-                                aria-current="page"
-                            >
+                            <a class="page-link" href="#" aria-current="page">
                                 1
                             </a>
-
                         </li>
 
                         <li class="page-item">
-
-                            <a
-                                class="page-link"
-                                href="#"
-                            >
+                            <a class="page-link" href="#">
                                 2
                             </a>
-
                         </li>
 
                         <li class="page-item">
-
-                            <a
-                                class="page-link"
-                                href="#"
-                            >
+                            <a class="page-link" href="#">
                                 3
                             </a>
-
                         </li>
 
                         <li class="page-item">
-
                             <a
                                 class="page-link"
                                 href="#"
@@ -821,74 +535,47 @@
                             >
                                 &gt;
                             </a>
-
                         </li>
 
                     </ul>
-
                 </nav>
 
-
             </div>
-
         </section>
-
     </main>
-
 
 
     <!-- =========================================
          FOOTER
-
     ========================================== -->
 
     <footer class="bg-dark text-white py-4">
-
         <div class="container">
-
             <div
                 class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
             >
-
                 <div>
-
-                    <strong>
-                        NEXUS
-                    </strong>
-
-                    <span>
-                        STORE
-                    </span>
-
+                    <strong>NEXUS</strong>
+                    <span>STORE</span>
                 </div>
 
                 <p class="mb-0 small">
                     © 2026 Nexus Store. Todos los derechos reservados.
                 </p>
-
             </div>
-
         </div>
-
     </footer>
 
 
-
     <!-- =========================================
-         BOOTSTRAP JAVASCRIPT
+         JAVASCRIPT
     ========================================== -->
 
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     ></script>
 
-
-    <!-- =========================================
-         JAVASCRIPT PERSONALIZADO
-    ========================================== -->
-
     <script src="js/main.js"></script>
-
 
 </body>
 

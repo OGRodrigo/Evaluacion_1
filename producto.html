@@ -12,10 +12,10 @@
 
     <meta
         name="description"
-        content="Detalle del Notebook ASUS VivoBook 15 en Nexus Store."
+        content="Detalle de producto tecnológico disponible en Nexus Store."
     >
 
-    <title>Nexus Store | Notebook ASUS VivoBook 15</title>
+    <title>Nexus Store | Detalle de producto</title>
 
 
     <!-- =========================================
@@ -139,7 +139,8 @@
                         <li class="nav-item">
 
                             <a
-                                class="nav-link"
+                                class="nav-link active"
+                                aria-current="page"
                                 href="productos.html"
                             >
                                 Productos
@@ -240,6 +241,7 @@
                         <li
                             class="breadcrumb-item active"
                             aria-current="page"
+                            id="product-breadcrumb-name"
                         >
                             Notebook ASUS VivoBook 15
                         </li>
@@ -342,7 +344,7 @@
 
                             <!-- Etiqueta -->
 
-                            <span class="product-badge">
+                            <span class="product-badge" id="product-detail-badge">
                                 Nuevo
                             </span>
 
@@ -359,7 +361,7 @@
 
                             <!-- Precio -->
 
-                            <p class="product-detail-price">
+                            <p class="product-detail-price" id="product-detail-price">
                                 $699.990
                             </p>
 
@@ -368,6 +370,7 @@
 
                             <div
                                 class="product-rating"
+                                id="product-detail-rating"
                                 aria-label="Calificación 4.8 de 5"
                             >
 
@@ -375,7 +378,7 @@
                                     ★★★★★
                                 </span>
 
-                                <small>
+                                <small id="product-rating-text">
                                     4.8 (24 reseñas)
                                 </small>
 
@@ -385,7 +388,7 @@
 
                             <!-- Descripción -->
 
-                            <p class="product-description">
+                            <p class="product-description" id="product-description">
 
                                 Notebook potente y liviano, ideal para
                                 trabajo, estudio y entretenimiento.
@@ -407,7 +410,7 @@
                                     Características
                                 </h2>
 
-                                <ul>
+                                <ul id="product-specifications-list">
 
                                     <li>
                                         Procesador Intel Core i5-1335U
@@ -620,6 +623,8 @@
     ========================================== -->
 
     <script src="js/main.js"></script>
+
+    <script src="js/product_detail.js"></script>
 
 
 </body>

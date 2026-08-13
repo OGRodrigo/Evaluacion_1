@@ -2,11 +2,9 @@
 
 Proyecto grupal correspondiente a la Evaluación 1 del Diplomado Full Stack.
 
-Nexus Store es un mini catálogo web de productos tecnológicos desarrollado con HTML5, CSS3, Bootstrap 5,
-JavaScript Vanilla y Git/GitHub.
+Nexus Store es un mini catálogo web de productos tecnológicos desarrollado con HTML5, CSS3, Bootstrap 5, JavaScript Vanilla y Git/GitHub.
 
-El proyecto aplica diseño responsive, estructura semántica, accesibilidad básica, manipulación del DOM y un flujo de trabajo colaborativo basado en ramas, Pull Requests y Code Review.
-
+El proyecto aplica diseño responsive, estructura semántica, accesibilidad, manipulación del DOM y un flujo de trabajo colaborativo basado en ramas, Pull Requests y Code Review.
 
 👥 Integrantes
 
@@ -14,31 +12,29 @@ Rodrigo Astudillo
 
 Waldo Araya
 
-
 🎯 Objetivo del proyecto
 
 Desarrollar un mini sitio web responsive de productos tecnológicos que permita aplicar los principales contenidos trabajados durante el módulo:
 
-HTML5 semántico
+HTML5 semántico.
 
-CSS3
+CSS3.
 
-Bootstrap 5
+Bootstrap 5.
 
-Responsive Design
+Responsive Design y enfoque Mobile First.
 
-JavaScript Vanilla
+JavaScript Vanilla.
 
-Manipulación del DOM
+Manipulación del DOM.
 
-Eventos con addEventListener
+Eventos con addEventListener.
 
-Git
+Persistencia con localStorage.
 
-GitHub
+Git y GitHub.
 
-Trabajo colaborativo mediante Pull Requests
-
+Trabajo colaborativo mediante ramas, Pull Requests y Code Review.
 
 🛠️ Tecnologías utilizadas
 
@@ -52,7 +48,7 @@ Estructura semántica de las páginas
 
 CSS3
 
-Estilos personalizados
+Estilos personalizados e identidad visual
 
 Bootstrap 5
 
@@ -62,7 +58,7 @@ JavaScript Vanilla
 
 Interactividad y manipulación del DOM
 
-LocalStorage
+localStorage
 
 Persistencia del contador del carrito
 
@@ -82,14 +78,23 @@ Live Server
 
 Ejecución local del proyecto
 
-
 📁 Estructura del proyecto
 
 Evaluacion_1/
 │
 ├── .github/
+│   └── pull_request_template.md
 ├── css/
 │   └── custom.css
+├── docs/
+│   └── screenshots/
+│       ├── home.JPG
+│       ├── productos.JPG
+│       ├── productos-mobile.JPG
+│       ├── producto.JPG
+│       ├── producto-mobile.JPG
+│       ├── contacto.JPG
+│       └── contacto-mobile.JPG
 ├── img/
 ├── js/
 │   └── main.js
@@ -108,19 +113,19 @@ Página principal de Nexus Store.
 
 Incluye:
 
-Navbar responsive
+Navbar responsive.
 
-Hero principal
+Hero principal.
 
-Llamadas a la acción
+Llamadas a la acción.
 
-Secciones informativas
+Categorías de productos.
 
-Beneficios
+Productos destacados.
 
-Productos destacados
+Beneficios.
 
-Footer
+Footer.
 
 🛒 Productos — productos.html
 
@@ -128,30 +133,29 @@ Catálogo general de productos tecnológicos.
 
 Incluye:
 
-Buscador preparado para JavaScript
+Buscador dinámico de productos.
 
-Filtro por categoría
+Filtro por categoría.
 
-Selector de ordenamiento
+Selector de ordenamiento.
 
-Contador de resultados
+Contador dinámico de resultados.
 
-Grid responsive
+Grid responsive.
 
-Cards de productos
+Cards de productos.
 
-Imágenes locales
+Imágenes locales.
 
-Paginación visual
+Paginación visual.
 
-Navegación hacia el detalle de producto
+Navegación hacia el detalle de producto.
 
 Distribución responsive:
 
-Mobile       → 1 producto por fila
-Tablet       → 2 productos por fila
-Desktop      → 3 productos por fila
-
+Mobile   → 1 producto por fila
+Tablet   → 2 productos por fila
+Desktop  → 3 productos por fila
 
 💻 Detalle de producto — producto.html
 
@@ -159,34 +163,33 @@ Página con información detallada del producto seleccionado.
 
 Incluye:
 
-Breadcrumb
+Breadcrumb.
 
-Imagen principal
+Imagen principal.
 
-Galería de miniaturas
+Galería de miniaturas.
 
-Nombre
+Nombre.
 
-Precio
+Precio.
 
-Valoración
+Valoración.
 
-Descripción
+Descripción.
 
-Características técnicas
+Características técnicas.
 
-Disponibilidad
+Disponibilidad.
 
-Selector de cantidad
+Selector de cantidad.
 
-Botón Agregar al carrito
+Botón Agregar al carrito.
 
-Botón Comprar ahora
+Botón Comprar ahora.
 
-Información de envío y garantía
+Información de envío y garantía.
 
-El diseño fue desarrollado siguiendo un enfoque mobile-first.
-
+El diseño fue desarrollado siguiendo un enfoque Mobile First.
 
 ✉️ Contacto — contacto.html
 
@@ -194,29 +197,29 @@ Página destinada a consultas de los usuarios.
 
 Incluye:
 
-Información de contacto
+Información de contacto.
 
-Email
+Email.
 
-Teléfono
+Teléfono.
 
-Ubicación
+Ubicación.
 
-Horario de atención
+Horario de atención.
 
-Formulario de contacto
+Formulario de contacto.
 
-Nombre
+Nombre.
 
-Email
+Email.
 
-Asunto
+Asunto.
 
-Mensaje
+Mensaje.
 
-Validaciones HTML5
+Validaciones HTML5.
 
-Footer compartido
+Footer compartido.
 
 El formulario utiliza atributos como:
 
@@ -226,10 +229,9 @@ minlength
 
 para proporcionar una primera capa de validación nativa.
 
-
 📱 Responsive Design
 
-El proyecto fue desarrollado con enfoque mobile-first utilizando Bootstrap Grid y Media Queries.
+El proyecto fue desarrollado con enfoque Mobile First utilizando Bootstrap Grid y Media Queries.
 
 Se realizaron pruebas principalmente en:
 
@@ -248,7 +250,6 @@ Resultado esperado:
 
 true
 
-
 ⚡ JavaScript
 
 El proyecto utiliza JavaScript Vanilla para agregar comportamiento dinámico a la interfaz.
@@ -257,17 +258,21 @@ Carrito
 
 La funcionalidad del carrito contempla:
 
-Aumentar cantidad
+Aumentar cantidad.
 
-Disminuir cantidad
+Disminuir cantidad.
 
-Agregar productos
+Validar límites mínimos y máximos.
 
-Actualizar contador
+Limitar la compra a un máximo de 10 unidades por producto.
 
-Mostrar feedback al usuario
+Agregar productos.
 
-Persistir información mediante localStorage
+Actualizar el contador del carrito.
+
+Mostrar feedback al usuario.
+
+Persistir información mediante localStorage.
 
 Ejemplo de evento:
 
@@ -277,15 +282,23 @@ element.addEventListener("click", () => {
 
 Catálogo
 
-La estructura HTML está preparada para implementar:
+El catálogo incorpora funcionalidades dinámicas desarrolladas con JavaScript Vanilla:
 
-Búsqueda de productos
+Búsqueda de productos por nombre y categoría.
 
-Filtros por categoría
+Normalización de texto para búsquedas con y sin tildes.
 
-Ordenamiento
+Filtro por categoría.
 
-Actualización dinámica del contador
+Ordenamiento por menor precio.
+
+Ordenamiento por mayor precio.
+
+Ordenamiento alfabético A-Z.
+
+Actualización dinámica del contador de resultados.
+
+Combinación de búsqueda, filtro y ordenamiento.
 
 Las cards utilizan atributos data-* para facilitar la manipulación desde JavaScript.
 
@@ -295,31 +308,80 @@ data-name="Notebook ASUS VivoBook 15"
 data-category="notebooks"
 data-price="699990"
 
-
 ♿ Accesibilidad
 
-Durante el desarrollo se incorporaron prácticas básicas de accesibilidad:
+Durante el desarrollo se incorporaron prácticas de accesibilidad:
 
-HTML semántico
+HTML semántico.
 
-Atributos alt en imágenes
+Atributos alt en imágenes.
 
-label asociados a formularios
+label asociados a formularios.
 
-aria-label
+aria-label.
 
-aria-current
+aria-current.
 
-aria-live
+aria-live.
 
-Navegación mediante botones reales
+Uso de botones reales para acciones.
 
-Estados focus
+Estados focus.
 
-Contraste visual
+Contraste visual.
 
-Jerarquía adecuada de títulos
+Jerarquía adecuada de títulos.
 
+Correcciones específicas detectadas mediante validación W3C.
+
+✅ Validación W3C
+
+Las cuatro páginas principales de Nexus Store fueron verificadas utilizando W3C Nu HTML Checker, con el objetivo de comprobar la correcta estructura y conformidad del marcado HTML5.
+
+Página
+
+Errores
+
+Advertencias
+
+Estado
+
+index.html
+
+0
+
+0
+
+✅ Válido
+
+productos.html
+
+0
+
+0
+
+✅ Válido
+
+producto.html
+
+0
+
+0
+
+✅ Válido
+
+contacto.html
+
+0
+
+0
+
+✅ Válido
+
+La validación final fue realizada después de corregir las observaciones de accesibilidad detectadas en el contador del carrito del Navbar y en la calificación del detalle de producto.
+
+Herramienta utilizada: W3C Nu HTML Checker
+Fecha de validación: 12 de agosto de 2026
 
 🎨 Identidad visual
 
@@ -342,12 +404,11 @@ Tipografía principal
 
 Inter
 
-
 🌿 Flujo de trabajo Git
 
 El proyecto utiliza un flujo basado en ramas por funcionalidad.
 
-Ejemplo:
+Ejemplos de ramas utilizadas:
 
 main
 │
@@ -359,6 +420,9 @@ main
 ├── feature/detalle-producto
 ├── feature/contacto
 ├── feature/carrito-js
+├── feature/busqueda-js
+├── feature/navbar-w3c
+├── feature/producto-w3c
 └── feature/documentacion-readme
 
 Flujo utilizado:
@@ -383,41 +447,37 @@ Approve
       ↓
 Merge a main
 
-
 🔍 Code Review
 
 Los Pull Requests son revisados por el otro integrante antes de realizar el merge.
 
 Durante las revisiones se consideran aspectos como:
 
-Estructura HTML
+Estructura HTML.
 
-Separación de responsabilidades
+Separación de responsabilidades.
 
-Responsive
+Responsive.
 
-Consistencia visual
+Consistencia visual.
 
-Accesibilidad
+Accesibilidad.
 
-Comportamiento JavaScript
+Comportamiento JavaScript.
 
-Posibles errores
+Posibles errores.
 
-Casos límite
+Casos límite.
 
-Integración con código existente
+Integración con código existente.
 
-Cuando se detecta una observación se utiliza:
+Cuando se detecta una observación se utiliza Request changes.
 
-Request changes
-
-El desarrollador realiza la corrección en la misma rama y posteriormente se ejecuta una nueva revisión.
-
+El desarrollador realiza la corrección en la misma rama y posteriormente se ejecuta una nueva revisión antes del merge.
 
 📝 Convención de commits
 
-Se utilizan mensajes descriptivos siguiendo una convención simple.
+Se utilizan mensajes descriptivos siguiendo Conventional Commits.
 
 Ejemplos:
 
@@ -434,7 +494,6 @@ style:  cambios visuales
 fix:    corrección
 chore:  tareas auxiliares
 docs:   documentación
-
 
 ▶️ Cómo ejecutar el proyecto
 
@@ -461,140 +520,182 @@ productos.html
 producto.html
 contacto.html
 
-
 🧪 Pruebas realizadas
 
 Durante el desarrollo se realizaron pruebas manuales sobre:
 
-Navegación entre páginas
+Navegación entre páginas.
 
-Navbar responsive
+Navbar responsive.
 
-Menú mobile
+Menú mobile.
 
-Grid de productos
+Grid de productos.
 
-Imágenes
+Imágenes.
 
-Adaptación responsive
+Adaptación responsive.
 
-Formularios
+Formularios.
 
-Validaciones HTML5
+Validaciones HTML5.
 
-Controles de cantidad
+Controles de cantidad.
 
-Contador del carrito
+Límite máximo de 10 unidades.
 
-Persistencia mediante localStorage
+Contador del carrito.
 
-Comportamiento entre páginas
+Persistencia mediante localStorage.
 
-Ausencia de overflow horizontal
+Búsqueda de productos.
 
+Búsqueda con y sin tildes.
 
-🚧 Estado del proyecto
+Filtro por categoría.
 
-El proyecto se encuentra en desarrollo activo.
+Ordenamiento por precio.
 
-Las principales estructuras visuales y responsive del sitio ya fueron implementadas.
+Ordenamiento alfabético.
 
-Las funcionalidades JavaScript se están incorporando mediante features independientes y Pull Requests para mantener una historia Git clara y facilitar el Code Review.
+Actualización dinámica del contador de resultados.
 
-# 📸 Capturas del proyecto
+Combinación de búsqueda, filtros y ordenamiento.
+
+Comportamiento entre páginas.
+
+Ausencia de overflow horizontal.
+
+Validación W3C de las cuatro páginas principales.
+
+📸 Capturas del proyecto
 
 Las siguientes capturas muestran la interfaz de Nexus Store tanto en escritorio como en dispositivos móviles, permitiendo visualizar la adaptación responsive del proyecto.
 
----
+🏠 Home
 
-## 🏠 Home
+Desktop
 
-### Desktop
-
-<img src="docs/screenshots/home.jpg"
-     alt="Nexus Store Home en escritorio"
-     width="850">
+<img src="docs/screenshots/home.JPG"
+  alt="Nexus Store Home en escritorio"
+  width="850">
 
 El Home presenta la navegación principal, el Hero y las categorías de productos del sitio.
 
----
+📦 Catálogo de productos
 
-## 📦 Catálogo de productos
+Desktop
 
-### Desktop
+<img src="docs/screenshots/productos.JPG"
+  alt="Catálogo de productos Nexus Store en escritorio"
+  width="850">
 
-<img src="docs/screenshots/productos.jpg"
-     alt="Catálogo de productos Nexus Store en escritorio"
-     width="850">
+Mobile
 
-### Mobile
-
-<img src="docs/screenshots/productos-mobile.jpg"
-     alt="Catálogo de productos Nexus Store en dispositivo móvil"
-     width="320">
+<img src="docs/screenshots/productos-mobile.JPG"
+  alt="Catálogo de productos Nexus Store en dispositivo móvil"
+  width="320">
 
 En dispositivos móviles, los controles de búsqueda, categoría y ordenamiento se organizan verticalmente y las cards de productos se adaptan al ancho disponible.
 
----
+🔍 Detalle de producto
 
-## 🔍 Detalle de producto
+Desktop
 
-### Desktop
+<img src="docs/screenshots/producto.JPG"
+  alt="Detalle de producto Nexus Store en escritorio"
+  width="850">
 
-<img src="docs/screenshots/producto.jpg"
-     alt="Detalle de producto Nexus Store en escritorio"
-     width="850">
+Mobile
 
-### Mobile
-
-<img src="docs/screenshots/producto-mobile.jpg"
-     alt="Detalle de producto Nexus Store en dispositivo móvil"
-     width="320">
+<img src="docs/screenshots/producto-mobile.JPG"
+  alt="Detalle de producto Nexus Store en dispositivo móvil"
+  width="320">
 
 La vista de detalle cambia desde una distribución horizontal en escritorio a una distribución vertical en dispositivos móviles.
 
----
+✉️ Contacto
 
-## ✉️ Contacto
+Desktop
 
-### Desktop
+<img src="docs/screenshots/contacto.JPG"
+  alt="Página de contacto Nexus Store en escritorio"
+  width="850">
 
-<img src="docs/screenshots/contacto.jpg"
-     alt="Página de contacto Nexus Store en escritorio"
-     width="850">
+Mobile
 
-### Mobile
-
-<img src="docs/screenshots/contacto-mobile.jpg"
-     alt="Página de contacto Nexus Store en dispositivo móvil"
-     width="320">
+<img src="docs/screenshots/contacto-mobile.JPG"
+  alt="Página de contacto Nexus Store en dispositivo móvil"
+  width="320">
 
 La información de contacto y el formulario se reorganizan para mantener una correcta visualización y experiencia de usuario en pantallas pequeñas.
 
----
 
+✅ Estado del proyecto
 
+Nexus Store se encuentra finalizado para la Evaluación 1 del Diplomado Full Stack.
+
+Las cuatro páginas requeridas se encuentran implementadas:
+
+Home.
+
+Listado de productos.
+
+Detalle de producto.
+
+Contacto.
+
+El proyecto cuenta con:
+
+HTML5 semántico.
+
+CSS3 personalizado.
+
+Bootstrap 5 mediante CDN.
+
+Diseño Mobile First.
+
+Layout responsive para mobile y desktop.
+
+JavaScript Vanilla.
+
+Manipulación del DOM.
+
+Eventos propios mediante addEventListener.
+
+Búsqueda, filtros y ordenamiento del catálogo.
+
+Carrito básico con persistencia mediante localStorage.
+
+Validación W3C de las cuatro páginas con 0 errores y 0 advertencias.
+
+Flujo colaborativo mediante ramas, Pull Requests y Code Review.
+
+Conventional Commits.
+
+Capturas responsive del proyecto.
+
+El proyecto queda preparado para su presentación y defensa correspondiente a la Evaluación 1.
 
 👥 Trabajo colaborativo
 
-El desarrollo se realiza de forma colaborativa utilizando GitHub.
+El desarrollo se realizó de forma colaborativa utilizando GitHub.
 
 Cada integrante:
 
-Desarrolla funcionalidades en ramas independientes
+Desarrolló funcionalidades en ramas independientes.
 
-Realiza commits propios
+Realizó commits propios.
 
-Crea Pull Requests
+Creó Pull Requests.
 
-Revisa el código del compañero
+Revisó el código del compañero.
 
-Solicita correcciones cuando corresponde
+Solicitó correcciones cuando correspondió.
 
-Aprueba los cambios antes del merge
+Aprobó los cambios antes del merge.
 
-Este flujo permite mantener main estable y documentar claramente la participación de ambos integrantes.
-
+Este flujo permitió mantener main estable y documentar claramente la participación de ambos integrantes.
 
 📄 Evaluación
 
@@ -604,12 +705,12 @@ Diplomado Full Stack — Evaluación 1
 
 Tecnologías principales:
 
-HTML5 · CSS3 · Bootstrap 5 · JavaScript · Git · GitHub
-
+HTML5 · CSS3 · Bootstrap 5 · JavaScript Vanilla · Git · GitHub
 
 👨‍💻 Autores
 
 Rodrigo Astudillo
+
 Waldo Araya
 
 Proyecto académico desarrollado con fines educativos.

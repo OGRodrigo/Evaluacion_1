@@ -234,7 +234,7 @@ producto.html?id=iphone-15
 producto.html?id=sony-wh-ch720n
 producto.html?id=jbl-charge-5
 producto.html?id=logitech-g913
-producto.html?id=mx-master-3s
+producto.html?id=logitech-mx-master-3s
 producto.html?id=corsair-tc100
 ```
 
@@ -371,7 +371,7 @@ La funcionalidad del carrito contempla:
 - Aumentar cantidad.
 - Disminuir cantidad.
 - Validar límites mínimos y máximos.
-- Limitar la compra a un máximo de 10 unidades por producto.
+- Limitar la selección a un máximo de 10 unidades por operación.
 - Agregar unidades al carrito.
 - Actualizar el contador visible.
 - Mostrar feedback al usuario.
@@ -632,7 +632,7 @@ Durante el desarrollo se incorporaron prácticas de accesibilidad:
 
 Las cuatro páginas principales de Nexus Store fueron verificadas utilizando **W3C Nu HTML Checker**, con el objetivo de comprobar la estructura y conformidad del marcado HTML5.
 
-La validación fue repetida después de las correcciones finales de navegación, categorías y detalle de productos.
+Durante el cierre del proyecto se validaron las cuatro páginas principales, registrando 0 errores y 0 advertencias.
 
 | Página | Errores | Advertencias | Estado |
 |---|---:|---:|---|
@@ -896,7 +896,7 @@ Durante el desarrollo se realizaron pruebas manuales sobre:
 - Formularios.
 - Validaciones HTML5.
 - Controles de cantidad.
-- Límite máximo de 10 unidades.
+- Límite máximo de 10 unidades por operación.
 - Contador del carrito.
 - Persistencia mediante `localStorage`.
 - Búsqueda de productos.

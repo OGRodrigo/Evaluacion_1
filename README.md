@@ -8,6 +8,22 @@ El proyecto aplica diseño responsive, estructura semántica, accesibilidad, man
 
 ---
 
+## 🌐 Demo en vivo
+
+Nexus Store se encuentra desplegado mediante GitHub Pages:
+
+https://ogrodrigo.github.io/Evaluacion_1/
+
+---
+
+## 🔗 Repositorio
+
+Repositorio oficial del proyecto:
+
+https://github.com/OGRodrigo/Evaluacion_1
+
+---
+
 ## 👥 Integrantes
 
 - Rodrigo Astudillo
@@ -45,6 +61,7 @@ Desarrollar un mini sitio web responsive de productos tecnológicos que permita 
 | localStorage | Persistencia del contador del carrito |
 | Git | Control de versiones |
 | GitHub | Repositorio, ramas, Pull Requests y Code Review |
+| GitHub Pages | Despliegue público del proyecto |
 | Visual Studio Code | Entorno de desarrollo |
 | Live Server | Ejecución local del proyecto |
 
@@ -72,6 +89,16 @@ Evaluacion_1/
 │       └── contacto-mobile.JPG
 │
 ├── img/
+│   ├── Image_Hero.jpg
+│   ├── asus-vivobook.jpg
+│   ├── corsair-tc100.jpg
+│   ├── iphone-15.jpg
+│   ├── jbl-charge-5.jpg
+│   ├── logitech-g913.jpg
+│   ├── logitech-mx-master-3s.jpg
+│   ├── macbook-air-m2.jpg
+│   ├── samsung-galaxy-s24.jpg
+│   └── sony-wh-ch720n.jpg
 │
 ├── js/
 │   ├── main.js
@@ -211,6 +238,8 @@ producto.html?id=mx-master-3s
 producto.html?id=corsair-tc100
 ```
 
+De esta manera, una única página `producto.html` permite mostrar dinámicamente los nueve productos disponibles en el catálogo.
+
 Si el identificador recibido no corresponde a un producto registrado, la implementación utiliza ASUS VivoBook como producto de respaldo.
 
 El diseño fue desarrollado siguiendo un enfoque **Mobile First**.
@@ -317,16 +346,21 @@ Contiene las funcionalidades generales del sitio:
 
 Contiene la lógica específica del detalle dinámico:
 
-- Datos de los productos.
+- Datos de los nueve productos del catálogo.
 - Lectura del parámetro `id`.
 - Selección del producto correspondiente.
 - Modificación dinámica del DOM.
-- Actualización de nombre.
-- Actualización de precio.
-- Actualización de imagen.
-- Actualización de descripción.
-- Actualización de valoración.
-- Actualización de características.
+- Actualización del título de la pestaña.
+- Actualización del breadcrumb.
+- Actualización de imagen principal y miniaturas.
+- Actualización del badge.
+- Actualización del nombre.
+- Actualización del precio.
+- Actualización de la valoración y cantidad de reseñas.
+- Actualización de la descripción.
+- Actualización de las características técnicas.
+
+De esta forma se reutiliza una única página `producto.html` para mostrar el detalle de los nueve productos disponibles en el catálogo.
 
 ---
 
@@ -413,6 +447,15 @@ const categoryFromUrl =
 ```
 
 y selecciona automáticamente la opción correspondiente antes de ejecutar el filtro.
+
+Ejemplos:
+
+```text
+productos.html?categoria=notebooks
+productos.html?categoria=smartphones
+productos.html?categoria=audio
+productos.html?categoria=gaming
+```
 
 ---
 
@@ -598,8 +641,7 @@ La validación fue repetida después de las correcciones finales de navegación,
 | `producto.html` | 0 | 0 | ✅ Válido |
 | `contacto.html` | 0 | 0 | ✅ Válido |
 
-**Herramienta utilizada:** W3C Nu HTML Checker  
-**Fecha de validación:** 12 de agosto de 2026
+**Herramienta utilizada:** W3C Nu HTML Checker
 
 Resultado final:
 
@@ -693,6 +735,7 @@ main
 ├── feature/documentacion-readme
 ├── feature/detalle-dinamico
 ├── feature/correccion-integracion-detalle
+├── docs/readme-final
 └── feature/actualizar-readme-final
 ```
 
@@ -701,7 +744,7 @@ Flujo utilizado:
 ```text
 main actualizado
       ↓
-crear rama feature
+crear rama de trabajo
       ↓
 desarrollo
       ↓
@@ -757,6 +800,7 @@ Este flujo permitió detectar y corregir durante el proyecto problemas relaciona
 - Accesibilidad.
 - Navegación dinámica.
 - Integración entre Home, catálogo y detalle.
+- Documentación final.
 
 ---
 
@@ -773,6 +817,7 @@ fix: unificar footer y beneficios del detalle
 chore: agregar imagenes del catalogo
 docs: ampliar documentacion del proyecto
 fix: corregir navegacion de productos y categorias
+docs: actualizar README final del proyecto
 ```
 
 Prefijos utilizados:
@@ -945,7 +990,6 @@ La información de contacto y el formulario se reorganizan para mantener una cor
 
 ---
 
-
 ## ✅ Estado del proyecto
 
 Nexus Store se encuentra **finalizado para la Evaluación 1 del Diplomado Full Stack**.
@@ -977,6 +1021,7 @@ El proyecto cuenta con:
 - Flujo colaborativo mediante ramas, Pull Requests y Code Review.
 - Conventional Commits.
 - Capturas responsive del proyecto.
+- Despliegue mediante GitHub Pages.
 
 El proyecto queda preparado para su presentación y defensa correspondiente a la **Evaluación 1**.
 
@@ -1020,6 +1065,7 @@ Cada integrante:
 - Solicitó correcciones cuando correspondió.
 - Corrigió observaciones dentro de la misma rama.
 - Aprobó los cambios antes del merge.
+- Participó en la documentación final del proyecto.
 
 Este flujo permitió mantener `main` estable y documentar claramente la participación de ambos integrantes.
 

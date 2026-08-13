@@ -363,8 +363,8 @@ function renderProduct(product) {
 
         productRating.setAttribute(
             "aria-label",
-            `Calificación ${product.rating} de 5`
-        );
+            `Calificación ${product.rating} de 5, basada en ${product.reviews}`
+       );
 
     }
 

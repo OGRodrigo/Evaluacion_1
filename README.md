@@ -6,6 +6,16 @@ Nexus Store es un mini catálogo web de productos tecnológicos desarrollado con
 
 El proyecto aplica diseño responsive, estructura semántica, accesibilidad, manipulación del DOM y un flujo de trabajo colaborativo basado en ramas, Pull Requests y Code Review.
 
+🌐 Demo en vivo
+
+Nexus Store se encuentra desplegado mediante GitHub Pages:
+
+👉 https://ogrodrigo.github.io/Evaluacion_1/
+
+🔗 Repositorio
+
+https://github.com/OGRodrigo/Evaluacion_1
+
 👥 Integrantes
 
 Rodrigo Astudillo
@@ -97,7 +107,8 @@ Evaluacion_1/
 │       └── contacto-mobile.JPG
 ├── img/
 ├── js/
-│   └── main.js
+│   ├── main.js
+│   └── product_detail.js
 ├── index.html
 ├── productos.html
 ├── producto.html
@@ -191,6 +202,56 @@ Información de envío y garantía.
 
 El diseño fue desarrollado siguiendo un enfoque Mobile First.
 
+🔄 Detalle dinámico
+
+Las 9 tarjetas del catálogo están conectadas con producto.html mediante un identificador enviado en la URL.
+
+Ejemplo:
+
+producto.html?id=macbook-air-m2
+
+El archivo js/product_detail.js obtiene el identificador mediante URLSearchParams y actualiza dinámicamente:
+
+Título de la pestaña.
+
+Breadcrumb.
+
+Imagen principal y miniaturas.
+
+Badge.
+
+Nombre.
+
+Precio.
+
+Valoración y cantidad de reseñas.
+
+Descripción.
+
+Características técnicas.
+
+De esta forma se reutiliza una única página producto.html para mostrar el detalle de los nueve productos del catálogo:
+
+Notebook ASUS VivoBook 15.
+
+MacBook Air M2.
+
+Samsung Galaxy S24.
+
+iPhone 15.
+
+Audífonos Sony WH-CH720N.
+
+Parlante JBL Charge 5.
+
+Teclado Mecánico Logitech G913.
+
+Mouse Inalámbrico Logitech MX Master 3S.
+
+Silla Gamer Corsair TC100.
+
+Si el identificador recibido no existe, el detalle utiliza el ASUS VivoBook como producto de respaldo.
+
 ✉️ Contacto — contacto.html
 
 Página destinada a consultas de los usuarios.
@@ -277,7 +338,7 @@ Persistir información mediante localStorage.
 Ejemplo de evento:
 
 element.addEventListener("click", () => {
-    // cambio visible en el DOM
+// cambio visible en el DOM
 });
 
 Catálogo
@@ -307,6 +368,20 @@ Ejemplo:
 data-name="Notebook ASUS VivoBook 15"
 data-category="notebooks"
 data-price="699990"
+
+Detalle dinámico
+
+El archivo product_detail.js contiene la información de los nueve productos y renderiza el producto correspondiente según el parámetro id presente en la URL.
+
+Ejemplo:
+
+const urlParameters =
+new URLSearchParams(window.location.search);
+
+const productId =
+urlParameters.get("id");
+
+El detalle actualiza el DOM sin duplicar páginas HTML y también modifica atributos de accesibilidad como aria-label en la valoración del producto.
 
 ♿ Accesibilidad
 
@@ -378,7 +453,7 @@ contacto.html
 
 ✅ Válido
 
-La validación final fue realizada después de corregir las observaciones de accesibilidad detectadas en el contador del carrito del Navbar y en la calificación del detalle de producto.
+La validación final fue realizada sobre la versión consolidada en main, después de integrar las correcciones de accesibilidad, búsqueda, filtros, ordenamiento, carrito y detalle dinámico de productos.
 
 Herramienta utilizada: W3C Nu HTML Checker
 Fecha de validación: 12 de agosto de 2026
@@ -423,28 +498,29 @@ main
 ├── feature/busqueda-js
 ├── feature/navbar-w3c
 ├── feature/producto-w3c
+├── feature/detalle-dinamico
 └── feature/documentacion-readme
 
 Flujo utilizado:
 
 main actualizado
-      ↓
+↓
 crear feature
-      ↓
+↓
 desarrollo
-      ↓
+↓
 commits pequeños
-      ↓
+↓
 push
-      ↓
+↓
 Pull Request
-      ↓
+↓
 Code Review del compañero
-      ↓
+↓
 correcciones si corresponden
-      ↓
+↓
 Approve
-      ↓
+↓
 Merge a main
 
 🔍 Code Review
@@ -485,6 +561,9 @@ feat: agregar estructura del detalle de producto
 style: aplicar diseño responsive al detalle de producto
 fix: unificar footer y beneficios del detalle
 chore: agregar imagenes del catalogo
+feat: conectar catalogo con detalle dinamico
+feat: renderizar datos dinamicos de productos
+fix: mejorar accesibilidad del detalle dinamico
 docs: ampliar documentacion del proyecto
 
 Prefijos utilizados:
@@ -497,19 +576,19 @@ docs:   documentación
 
 ▶️ Cómo ejecutar el proyecto
 
-1. Clonar el repositorio
+Clonar el repositorio
 
 git clone https://github.com/OGRodrigo/Evaluacion_1.git
 
-2. Entrar al proyecto
+Entrar al proyecto
 
 cd Evaluacion_1
 
-3. Abrir con Visual Studio Code
+Abrir con Visual Studio Code
 
 code .
 
-4. Ejecutar
+Ejecutar
 
 Abrir index.html utilizando Live Server.
 
@@ -562,9 +641,17 @@ Actualización dinámica del contador de resultados.
 
 Combinación de búsqueda, filtros y ordenamiento.
 
+Navegación desde las nueve cards hacia su detalle correspondiente.
+
+Render dinámico de nombre, imagen, precio, rating, descripción y características.
+
+Funcionamiento del carrito desde el detalle dinámico.
+
 Comportamiento entre páginas.
 
 Ausencia de overflow horizontal.
+
+Consola del navegador sin errores durante las pruebas finales.
 
 Validación W3C de las cuatro páginas principales.
 
@@ -577,8 +664,8 @@ Las siguientes capturas muestran la interfaz de Nexus Store tanto en escritorio 
 Desktop
 
 <img src="docs/screenshots/home.JPG"
-  alt="Nexus Store Home en escritorio"
-  width="850">
+alt="Nexus Store Home en escritorio"
+width="850">
 
 El Home presenta la navegación principal, el Hero y las categorías de productos del sitio.
 
@@ -587,14 +674,14 @@ El Home presenta la navegación principal, el Hero y las categorías de producto
 Desktop
 
 <img src="docs/screenshots/productos.JPG"
-  alt="Catálogo de productos Nexus Store en escritorio"
-  width="850">
+alt="Catálogo de productos Nexus Store en escritorio"
+width="850">
 
 Mobile
 
 <img src="docs/screenshots/productos-mobile.JPG"
-  alt="Catálogo de productos Nexus Store en dispositivo móvil"
-  width="320">
+alt="Catálogo de productos Nexus Store en dispositivo móvil"
+width="320">
 
 En dispositivos móviles, los controles de búsqueda, categoría y ordenamiento se organizan verticalmente y las cards de productos se adaptan al ancho disponible.
 
@@ -603,33 +690,32 @@ En dispositivos móviles, los controles de búsqueda, categoría y ordenamiento 
 Desktop
 
 <img src="docs/screenshots/producto.JPG"
-  alt="Detalle de producto Nexus Store en escritorio"
-  width="850">
+alt="Detalle de producto Nexus Store en escritorio"
+width="850">
 
 Mobile
 
 <img src="docs/screenshots/producto-mobile.JPG"
-  alt="Detalle de producto Nexus Store en dispositivo móvil"
-  width="320">
+alt="Detalle de producto Nexus Store en dispositivo móvil"
+width="320">
 
-La vista de detalle cambia desde una distribución horizontal en escritorio a una distribución vertical en dispositivos móviles.
+La vista de detalle cambia desde una distribución horizontal en escritorio a una distribución vertical en dispositivos móviles. La misma página se reutiliza para los nueve productos mediante el sistema de detalle dinámico.
 
 ✉️ Contacto
 
 Desktop
 
 <img src="docs/screenshots/contacto.JPG"
-  alt="Página de contacto Nexus Store en escritorio"
-  width="850">
+alt="Página de contacto Nexus Store en escritorio"
+width="850">
 
 Mobile
 
 <img src="docs/screenshots/contacto-mobile.JPG"
-  alt="Página de contacto Nexus Store en dispositivo móvil"
-  width="320">
+alt="Página de contacto Nexus Store en dispositivo móvil"
+width="320">
 
 La información de contacto y el formulario se reorganizan para mantener una correcta visualización y experiencia de usuario en pantallas pequeñas.
-
 
 ✅ Estado del proyecto
 
@@ -665,6 +751,8 @@ Eventos propios mediante addEventListener.
 
 Búsqueda, filtros y ordenamiento del catálogo.
 
+Detalle dinámico para los nueve productos.
+
 Carrito básico con persistencia mediante localStorage.
 
 Validación W3C de las cuatro páginas con 0 errores y 0 advertencias.
@@ -674,6 +762,10 @@ Flujo colaborativo mediante ramas, Pull Requests y Code Review.
 Conventional Commits.
 
 Capturas responsive del proyecto.
+
+Pruebas finales en 375px, 768px y 1200px.
+
+Ausencia de overflow horizontal y consola sin errores.
 
 El proyecto queda preparado para su presentación y defensa correspondiente a la Evaluación 1.
 

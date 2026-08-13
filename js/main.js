@@ -725,8 +725,66 @@ if (
     productItems.length > 0
 ) {
 
-    updateProductsCounter(
-        productItems.length
-    );
+    /*
+        Revisamos si la página recibió
+        una categoría desde la URL.
+
+        Ejemplo:
+
+        productos.html?categoria=notebooks
+    */
+
+    const urlParameters =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    const categoryFromUrl =
+        urlParameters.get("categoria");
+
+
+    /*
+        Verificamos que la categoría recibida
+        exista realmente dentro del selector.
+    */
+
+    if (
+        categoryFilter &&
+        categoryFromUrl
+    ) {
+
+        const validCategories =
+            Array.from(
+                categoryFilter.options
+            ).map(
+                (option) =>
+                    option.value
+            );
+
+
+        if (
+            validCategories.includes(
+                categoryFromUrl
+            )
+        ) {
+
+            categoryFilter.value =
+                categoryFromUrl;
+
+        }
+
+    }
+
+
+    /*
+        Ejecutamos el filtro inicial.
+
+        Si no llegó ninguna categoría,
+        categoryFilter mantiene "all"
+        y se muestran todos los productos.
+    */
+
+    filterProducts();
 
 }

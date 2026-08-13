@@ -79,8 +79,9 @@ function updateCartCounter() {
         Modificamos visiblemente el DOM.
     */
 
-    cartCount.textContent =
-        cartQuantity;
+    cartCount.textContent = cartQuantity;
+
+        cartCount.setAttribute("aria-label",`${cartQuantity} ${cartQuantity === 1 ? "producto" : "productos"} en el carrito`);
 }
 
 
